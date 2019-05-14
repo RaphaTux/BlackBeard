@@ -1,0 +1,27 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todos os clientes </title>
+</head>
+<body>
+
+
+     <h1 class="titulo"> Clientes         </h1>
+     <img src="{% static '/Imagens/usuarios.png' %}"/>
+    <ul>
+    {% for cliente in clientes %}
+        <li>
+            <a href="{% url 'atualiza_cliente' cliente.id %}"> {{ cliente}}</a>
+            <a href="{% url 'deleta_cliente' cliente.id %}"> Deletar </a>
+        </li>
+    {% endfor%}
+    </ul>
+    <a href="{% url 'novo_cliente' %}"> Novo cliente </a>
+     <a href="{% url 'logout' %}">Sair</a>
+</body>
+</html>
