@@ -1,17 +1,10 @@
-{% load static%}
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static '/CSS/style.css' %}" >
-    <title>Bleck beard - Home </title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-    <h1> bem vindo a blackbeard </h1>
+{%  block title %} Seja bem vindo a BlackBeard {% endblock   %}
+
+{% block main %}
+
+  <h1> bem vindo a blackbeard </h1>
 
     {% if user.is_authenticated %}
         <p> Olá {{ user.username }} </p>
@@ -24,8 +17,4 @@
            <a href="{% url 'login' %}"> Logar </a>
         </form>
     {% endif %}
-
-
-
-</body>
-</html>
+{% endblock%}

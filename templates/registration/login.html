@@ -1,19 +1,18 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blackbeard - Login</title>
-</head>
-<body>
 
+
+
+{% extends 'base.html' %}
+
+{%  block title %} BlackBeard - Login  {% endblock   %}
+
+{% block main %}
+
+<center>
     <h2> Login </h2>
     <form method="post">
         {% csrf_token %}
         {{form.as_p}}
-        <button type="submit"> Login </button>
+        <button type="submit" class="btn btn-secondary btn-lg"> Login </button>
     </form>
-</body>
-</html>
+</center>
+{% endblock%}
