@@ -1,1 +1,1 @@
-web: gunicorn Blackbeard.wsgi --log-file -
+web: gunicorn BlackBeard.wsgi --log-file -
