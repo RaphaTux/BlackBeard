@@ -135,5 +135,6 @@ STATICFILES_DIRS = [
 #controle login
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'estaticos')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
