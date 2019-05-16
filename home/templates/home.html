@@ -19,8 +19,8 @@
   <!--<h1 class="titulo"> bem vindo a blackbeard </h1>-->
 
     {% if user.is_authenticated %}
-        <p> Olá {{ user.username }} </p>
-        <a href="{%url 'logout' %} "> Deslogar </a>
+        <!--<p> Olá {{ user.username }} </p>-->
+        <!--<a href="{%url 'logout' %} "> Deslogar </a>-->
     {% else %}
         <form method="post">
             {% csrf_token %}

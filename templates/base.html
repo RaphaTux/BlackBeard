@@ -15,14 +15,21 @@
 
 </head>
 <body>
+
     <nav id="menu" class="menu ul">
     <ul>
-        <li><a href="{% url 'home' %}">Home</a></li>
-        <li><a href="#">Contato</a></li>
+        {% csrf_token %}
         {% if user.is_authenticated %}
-            <li><a href="{%url 'logout' %} "> Deslogar </a></li>
+            <li><a href="{% url 'home' %}">Unidades</a></li>
+            <li><a href="{% url 'home' %}">Unidades</a></li>
+            <li><a href="{% url 'clientes' %}">Clientes</a></li>
+            <li><a href="{% url 'clientes' %}">Agendamentos</a></li>
+            <li><a href="{% url 'clientes' %}">Cortes</a></li>
+            <li><a href="{% url 'logout' %} "> Deslogar </a></li>
+            <li> Olá {{ user.username }}</li>
         {% else %}
-            <li><a href="{% url 'login' %}"> Logar </a></li>
+             <li><a href="{% url 'home' %}">home</a></li>
+            <li><a href="{% url 'login' %}"> Área Restrita </a></li>
         {% endif %}
     </ul>
 </nav>
