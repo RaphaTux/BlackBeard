@@ -20,7 +20,7 @@
     <ul>
         {% csrf_token %}
         {% if user.is_authenticated %}
-            <li><a href="{% url 'home' %}">Unidades</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
             <li><a href="{% url 'home' %}">Unidades</a></li>
             <li><a href="{% url 'clientes' %}">Clientes</a></li>
             <li><a href="{% url 'clientes' %}">Agendamentos</a></li>
@@ -34,8 +34,9 @@
     </ul>
 </nav>
 
-    {% block main %}
-    {% endblock%}
-
+    <div class="container">
+        {% block main %}
+        {% endblock%}
+    </div>
 </body>
 </html>

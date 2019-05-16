@@ -1,5 +1,6 @@
 {% extends 'base.html'%}
 {% load static %}
+{% load bootstrap %}
 {%  block title %} Black Beard - Novo Cliente {% endblock   %}
 
 
@@ -11,7 +12,7 @@
     <div class="form-group">
     <form method="POST">
         {% csrf_token %}
-        {{ form }}
+        {{ form |bootstrap }}
         <button type="submit"> Salvar </button>
     </form>
     </div>
