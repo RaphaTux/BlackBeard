@@ -1,0 +1,26 @@
+.titulo{
+    color:red;
+}
+
+
+body {
+    background-image = '{% static Imagens/FundoChic.jpg%}';
+}
+
+
+#topbar-fundo {
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 10000; /* salvo engano, o IE7 tem um limite de 9999 */
+height: 30px;
+overflow: visible; /* ??? */
+background: #333;
+}
+#topbar-centro {
+width: 970px;
+height: 30px;
+overflow: visible; /* ??? */
+background: #fff;
+margin: 0 auto;
+}
