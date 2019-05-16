@@ -1,10 +1,22 @@
+
 {% extends 'base.html' %}
+{% load static %}
 
 {%  block title %} Seja bem vindo a BlackBeard {% endblock   %}
 
-{% block main %}
 
-  <h1> bem vindo a blackbeard </h1>
+{% block main %}
+<style>
+        body
+        {
+            background-image: url("{% static 'Imagens/FundoChic.jpg' %}");
+        }
+
+</style>
+
+
+  <center><img src="{%  static 'Imagens/logoBranco.png' %}" alt=""></center>
+  <!--<h1 class="titulo"> bem vindo a blackbeard </h1>-->
 
     {% if user.is_authenticated %}
         <p> Olá {{ user.username }} </p>
@@ -14,7 +26,7 @@
             {% csrf_token %}
             {{ form.as_p }}
            <!--<a href="{% url 'login' %}"><button type="submit" class="btn btn-info"> Logar </button></a>-->
-           <a href="{% url 'login' %}"> Logar </a>
+           <!--<a href="{% url 'login' %}"> Logar </a>-->
         </form>
     {% endif %}
 {% endblock%}
